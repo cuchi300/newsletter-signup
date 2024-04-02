@@ -1,0 +1,50 @@
+@use 'base/variables' as v;
+@use 'base/mixin' as m;
+
+.success{
+    background-color: v.$White;
+    height: 100vh;
+    padding: 5rem 2rem;
+
+    @include m.tablet {
+        max-width: 55rem;
+        padding: 6rem;
+        height: auto;
+        border-radius: 3rem;
+    }
+
+    &__img{
+        margin-bottom: 3rem;
+    }
+    &__heading{
+        font-size: 4rem;
+        margin: 0;
+        font-weight: 900;
+        @include m.tablet {
+            font-size: 6rem;
+            line-height: 1;
+            padding-bottom: 2rem;
+        }
+    }
+    &__parrafo{
+        color: v.$Dark-Slate-Grey;
+        margin-top: 2rem;
+        &--dismiss{
+            text-align: center;
+            background-color: v.$Dark-Slate-Grey;
+            color: v.$White;
+            padding: 1.5rem;
+            border-radius: .5rem;
+            margin-top: 4rem;
+            border: none;
+            width: 100%;
+            &:hover{
+                cursor: pointer;
+                background-image: linear-gradient(to right, v.$Tomato 0%, darken(v.$Tomato, 10%) 100%);
+            }
+        }
+    }
+    &__span{
+        font-weight: bold;
+    }
+}

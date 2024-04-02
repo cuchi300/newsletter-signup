@@ -1,0 +1,58 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: v.$fuente-principal;
+    background-color: v.$Dark-Slate-Grey;
+}
+p{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.contenedor{
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 90%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.attribution {
+    font-size: 14px; 
+    text-align: center;
+    background-color: v.$White;
+    margin: 0;
+    padding: 1rem 0;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+.opacity-50{
+    opacity: 0;
+}
+.mensaje-exito{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    background-color: rgb(137, 196, 49);
+    color: v.$White;
+    text-align: center;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}

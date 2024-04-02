@@ -1,0 +1,105 @@
+@use 'base/variables' as v;
+@use 'base/mixin' as m;
+
+.margin{
+    @include m.tablet {
+        display: flex;
+        justify-content: center;
+        margin: 10rem 0;
+    }
+}
+.card{
+    background-color: v.$White;
+    padding-bottom: 2rem;
+
+    @include m.tablet {
+        max-width: 90rem;
+        @include m.grid(2,2rem);
+        border-radius: 2rem;
+        padding: 2rem;
+    }
+
+    &__img{
+        background-image: url(../img/illustration-sign-up-mobile.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 20rem;
+        width: 100%;
+        border-radius: 0 0 2rem 2rem;
+        grid-column: 2/2;
+        @include m.tablet {
+            background-image: url(../img/illustration-sign-up-desktop.svg);
+            height: 50rem;
+            border-radius: 2rem;
+        }
+    }
+
+    &__heading{
+        @include m.tablet {
+            font-size: 5rem;
+        }
+    }
+}
+
+.lista{
+    list-style: none;
+    padding: 0;
+    &__li{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    &__span{
+        width: 3rem;
+    }
+}
+
+.form{
+
+    &__flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__label{
+        display: block;
+        font-size: 1.3rem;
+        margin-bottom: .5rem;
+
+        &--error{
+            color: red;
+            
+        }
+    }
+    &__email,
+    &__submit{
+        padding: 1.5rem;
+        border-radius: .5rem;
+        width: 100%;
+    }
+    &__email{
+        font-size: 1.4rem;
+        color: v.$Grey;
+        border: 1px solid v.$Dark-Slate-Grey;
+        margin-bottom: 1rem;
+
+        &.mostrar-error{
+            border: 1px solid red;
+            background-color: lighten(red, 42%);
+            color: red;
+        }
+    }
+    &__submit{
+        text-align: center;
+        background-color: v.$Dark-Slate-Grey;
+        border: none;
+        color: v.$White;
+        &:hover{
+            cursor: pointer;
+            background-image: linear-gradient(to right, v.$Tomato 0%, darken(v.$Tomato, 10%) 100%);
+        }
+    }
+}

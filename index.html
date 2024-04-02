@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+
+  <div class="margin">
+    <div class="card" id="card-success">
+      <div class="card__img"></div>
+
+      <div class="contenedor">
+
+        <h1 class="card__heading">Stay updated!</h1>
+
+        <p class="card__parrafo">Join 60,000+ product managers receiving monthly updates on:</p>
+      
+        <ul class="lista">
+          <li class="lista__li">
+            <span class="lista__span">
+              <img src="build/img/icon-list.svg" alt="icono list">
+            </span>
+            <p>Product discovery and building what matters</p>
+          </li>
+          <li class="lista__li">
+            <span class="lista__span">
+              <img src="build/img/icon-list.svg" alt="icono list">
+            </span>
+            <p>Measuring to ensure updates are a success</p>
+          </li>
+          <li class="lista__li">
+            <span class="lista__span">
+              <img src="build/img/icon-list.svg" alt="icono list">
+            </span>
+            <p>And much more!</p>
+          </li>
+        </ul><!-- lista -->
+        
+        <form class="form" id="formulario">
+          <div class="form__campo">
+            <div class="form__flex">
+              <label class="form__label" for="email">Email address</label>
+            </div>
+            <input class="form__email" type="email" name="email" id="email" placeholder="email@company.com">
+          </div>
+          <input class="form__submit opacity-50" type="submit" name="submit" id="submit" disabled value="Subscribe to monthly newsletter">
+
+          <div class="spinner" id="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+          </div>
+        </form>
+
+      </div><!-- contenedor -->
+    </div><!-- card -->
+
+    
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Miguel Agustin Baiud</a>.
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
